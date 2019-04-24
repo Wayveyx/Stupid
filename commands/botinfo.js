@@ -10,7 +10,7 @@ const moment = require('moment');
 const duration = moment.duration(bot.uptime).format(' D [days], H [hrs], m [mins], s [secs]');
 let binfo = new Discord.RichEmbed()
 .setAuthor(bot.user.username, bot.user.displayAvatarURL)
-.setDescription(`**Uptime:** ${duration}\n**CPU:** ${usdcpu} | **Ram:** ${(used).toFixed(2)} MB\n${bot.guilds.size} **Servers** | ${bot.users.size} **Users**\n**Library:** [discord.js](https:/\/discord.js.org/#/) **Version:** ${Discord.version}\n**Developer: ${bot.users.get(settings.myid).tag}**\n[Invite Me](https:/\/bit.ly/SbbW1101) | [Support Server](https:/\/discord.gg/3e8KAZn)`)
+.setDescription(`**Uptime:** ${duration}\n**CPU:** ${usdcpu} | **Ram:** ${(used).toFixed(2)} MB\n${bot.guilds.size} **Servers** | ${bot.users.size} **Users**\n**Library:** [discord.js](https:/\/discord.js.org/#/) **Version:** ${Discord.version}\n**Developer: ${bot.users.get(settings.myid).tag}**\n[Invite Me](https:/\/bit.ly/SbbW1101)`)
 .setThumbnail(bot.user.displayAvatarURL)
 .setFooter('Stupid Bot v' + settings.version)
 .setColor('#f44242');
