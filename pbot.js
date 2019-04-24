@@ -7,7 +7,7 @@ const pfix = 'SB;';
 const { stringify } = require('querystring');
 const { request } = require('https');
 const DiscordBoats = require('dboats-api');
-const boats = new DiscordBoats({token: process.env.dbatoken});
+//const boats = new DiscordBoats({token: process.env.dbatoken});
    
 bot.on("ready", () => {
 console.log('[Stupid] Stupidbot running on version 1.0.0');
@@ -61,7 +61,7 @@ message.channel.send({embed: err});
 }
 });
 function post() {
-boats.postGuilds(bot.guilds.size);
+//boats.postGuilds(bot.guilds.size);
 bot.channels.get('570418350623031315').send(new Discord.RichEmbed()
                           .setTitle('Updated server counts')
                           .setDescription('Updated the server counts to ' + bot.guilds.size + ' servers.'));
