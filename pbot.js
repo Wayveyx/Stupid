@@ -14,13 +14,13 @@ const boats = new DiscordBoats({token: process.env.dbatoken});
    
 bot.on("ready", () => {
 console.log('[Stupid] Stupidbot running on version 1.0.0');
-bot.channels.get('530809191183417354').send('Stupid was restarted, back up now'); //work damn you
+bot.channels.get('564951236487675914').send('Stupid was restarted, back up now'); //work damn you
 //bot.user.setStatus('idle');
 bot.user.setActivity(`${bot.guilds.size} servers | sb;help`, {type: "LISTENING"});
 });
 bot.on("guildCreate", guild => { 
 bot.user.setActivity(`${bot.guilds.size} servers | sb;help`, {type: "LISTENING"});
-bot.channels.get('530808864786874368').send(new Discord.RichEmbed()
+bot.channels.get('570418229441331210').send(new Discord.RichEmbed()
 .setAuthor(`Owner: ${guild.owner.user.tag} | ${guild.owner.user.id}`)                                    
 .setTitle(`New Server: ${guild.name} | ${guild.id}`)
 .setDescription(`Now in ${bot.guilds.size} servers`)
@@ -29,7 +29,7 @@ post();
 });
 bot.on("guildDelete", guild => { 
 bot.user.setActivity(`${bot.guilds.size} servers | sb;help`, {type: "LISTENING"});
-bot.channels.get('530808864786874368').send(new Discord.RichEmbed()
+bot.channels.get('570418229441331210').send(new Discord.RichEmbed()
 .setTitle(`Left a Server: ${guild.name} | ${guild.id}`)
 .setDescription(`Now in ${bot.guilds.size} servers`)
 .setColor('RANDOM'));
@@ -49,7 +49,7 @@ try{
 let commandFile = require(`./commands/${cmd}.js`);
 commandFile.run(bot, message, args);
 } catch(e) {
-bot.channels.get('530808817466867722').send(new Discord.RichEmbed()
+bot.channels.get('565011678203215892').send(new Discord.RichEmbed()
 .setTitle(`Server: ${message.guild.name}`)
 .setAuthor(message.author.tag)                                    
 .setDescription(e.message)
@@ -66,7 +66,7 @@ message.channel.send({embed: err});
 function post() {
 DisBotsClient.postServerCount(bot.guilds.size);
 boats.postGuilds(bot.guilds.size);
-bot.channels.get('530808951055450133').send(new Discord.RichEmbed()
+bot.channels.get('570418350623031315').send(new Discord.RichEmbed()
                           .setTitle('Updated server counts')
                           .setDescription('Updated the server counts to ' + bot.guilds.size + ' servers.'));
 }
