@@ -6,7 +6,6 @@ const bot = new Discord.Client();
 const pfix = 'SB;';
 const { stringify } = require('querystring');
 const { request } = require('https');
-const db = require('quick.db');
 const DisBots = require('discordbots.tk');
 const DisBotsClient = new DisBots(process.env.dbtoken);
 const DiscordBoats = require('dboats-api');
