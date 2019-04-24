@@ -67,4 +67,4 @@ bot.channels.get('570418350623031315').send(new Discord.RichEmbed()
                           .setDescription('Updated the server counts to ' + bot.guilds.size + ' servers.'));
 }
 
-bot.login(process.env.token)
+bot.login(process.env.TOKEN)
