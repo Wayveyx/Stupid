@@ -3,5 +3,5 @@ const settings = require('./jsons/settings.json');
 
 exports.run = (bot, message, args, tools) => {
 message.delete()
-message.channel.send(args.join(' ').replace('@everyone', 'everyone'));
+message.channel.send(args.join(' ').replace('@everyone', 'everyone').replace('@here', 'here'));
 }
