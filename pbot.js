@@ -6,8 +6,6 @@ const bot = new Discord.Client();
 const pfix = 'SB;';
 const { stringify } = require('querystring');
 const { request } = require('https');
-const DisBots = require('discordbots.tk');
-const DisBotsClient = new DisBots(process.env.dbtoken);
 const DiscordBoats = require('dboats-api');
 const boats = new DiscordBoats({token: process.env.dbatoken});
    
@@ -63,7 +61,6 @@ message.channel.send({embed: err});
 }
 });
 function post() {
-DisBotsClient.postServerCount(bot.guilds.size);
 boats.postGuilds(bot.guilds.size);
 bot.channels.get('570418350623031315').send(new Discord.RichEmbed()
                           .setTitle('Updated server counts')
