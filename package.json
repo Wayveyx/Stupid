@@ -1,0 +1,26 @@
+{
+  "name": "stupid",
+  "version": "1.0.0",
+  "description": "A Discord bot",
+  "main": "pbot.js",
+  "scripts": {
+    "start": "node pbot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsunamiiii/Stupid/"
+  },
+  "dependencies": {
+    "dboats-api": "1.0.1", 
+    "discord.js": "^11.4.2",
+    "discordbots.tk": "^1.0.9",
+    "fs": "0.0.1-security",
+    "https": "1.0.0",
+    "moment": "^2.22.1",
+    "moment-duration-format": "^2.2.2",
+    "querystring": "0.2.0",
+    "request": "^2.88.0",
+    "snekfetch": "^4.0.0"
+  }
+}
+
