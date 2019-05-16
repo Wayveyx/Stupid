@@ -22,7 +22,6 @@ bot.channels.get('570418229441331210').send(new Discord.RichEmbed()
 .setTitle(`New Server: ${guild.name} | ${guild.id}`)
 .setDescription(`Now in ${bot.guilds.size} servers`)
 .setColor('RANDOM'));
-post();
 });
 bot.on("guildDelete", guild => { 
 bot.user.setActivity(`${bot.guilds.size} servers | sb;help`, {type: "LISTENING"});
@@ -30,7 +29,6 @@ bot.channels.get('570418229441331210').send(new Discord.RichEmbed()
 .setTitle(`Left a Server: ${guild.name} | ${guild.id}`)
 .setDescription(`Now in ${bot.guilds.size} servers`)
 .setColor('RANDOM'));
-post();
 });
 
 bot.on('message', message => {
@@ -60,11 +58,5 @@ message.channel.send({embed: err});
                                            
 }
 });
-function post() {
-//boats.postGuilds(bot.guilds.size);
-bot.channels.get('570418350623031315').send(new Discord.RichEmbed()
-                          .setTitle('Updated server counts')
-                          .setDescription('Updated the server counts to ' + bot.guilds.size + ' servers.'));
-}
 
 bot.login(process.env.TOKEN)
