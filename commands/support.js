@@ -8,7 +8,6 @@ const hook = new Webhook.Webhook(process.env.WEBHOOKURL);
 exports.run = (bot, message, args) => {
 const whmsg = new Webhook.MessageBuilder()
 .setName(`${message.author.tag}`)
-.setIcon(message.author.avatarURL) //I have no idea if this will work
 .setColor("#FFA500")
 .setText(args.join(" ").replace("@", "(a)"))
 .addField("In Server:", message.guild.id)
