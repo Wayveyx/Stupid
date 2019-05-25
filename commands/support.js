@@ -3,7 +3,7 @@
 const Discord = require("discord.js");
 const Webhook = require("webhook-discord");
 const settings = require("./jsons/settings.json")
-const hook = new Webhook.webhook(process.env.WEBHOOKURL);
+const hook = new Webhook.Webhook(process.env.WEBHOOKURL);
 
 exports.run = (bot, message, args) => {
 const whmsg = Webhook.MessageBuilder()
