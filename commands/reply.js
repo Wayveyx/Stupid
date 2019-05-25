@@ -7,5 +7,5 @@ bot.channels.get(args.join().slice(0, 18).send(new Discord.RichEmbed()
 .setTitle("Support")
 .setColor("#FFA500")
 .setDescription(args.join(" ").slice(18))
-.setTimestamp();
+.setTimestamp());
 }
