@@ -10,7 +10,8 @@ const whmsg = new Webhook.MessageBuilder()
 .setName("Stupid Support")
 .setColor("#FFA500")
 .addField("User:", message.author.tag)
-.addField("Server:", `Name: ${message.guild.name}\nID: ${message.guild.id}`)
+.addField("Server:", `ID: ${message.guild.id}`)
+.addField("Channel:", `ID: ${message.channel.id}`)
 .addField("Message:", args.join(" ").replace("@", "(a)"))
 .setTime();
 hook.send(whmsg); //Im dumb lmao pls dont view previous versions
