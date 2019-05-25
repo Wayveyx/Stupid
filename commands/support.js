@@ -7,10 +7,10 @@ const hook = new Webhook.webhook(process.env.WEBHOOKURL);
 
 exports.run = (bot, message, args) => {
 const whmsg = Webhook.MessageBuilder()
-.setName(message.author.tag)
+.setName(`${message.author.tag} in ${message.guild.id}`)
 .setColor("#FFA500")
 .setText(args.join(" ").replace("@", "(a)"))
 .setImage(message.author.avatarURL)
 .setTime();
-bot.channels.get("").then(Hook.send(whmsg)); //This might not work
+bot.channels.get("581786947333390336").then(Hook.send(whmsg)); //This might not work
 }
