@@ -20,7 +20,8 @@
     "moment-duration-format": "^2.2.2",
     "querystring": "0.2.0",
     "request": "^2.88.0",
-    "snekfetch": "^4.0.0"
+    "snekfetch": "^4.0.0",
+    "webhook-discord": "3.2.0" 
   }
 }
 
