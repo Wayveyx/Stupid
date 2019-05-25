@@ -13,5 +13,5 @@ const whmsg = new Webhook.MessageBuilder()
 .setText(args.join(" ").replace("@", "(a)"))
 .addField("In Server:", message.guild.id)
 .setTime();
-hook.send(whmsg)); //Im dumb lmao pls dont view previous version
+hook.send(whmsg); //Im dumb lmao pls dont view previous version
 }
