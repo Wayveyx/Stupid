@@ -6,7 +6,7 @@ const settings = require("./jsons/settings.json")
 const hook = new Webhook.Webhook(process.env.WEBHOOKURL);
 
 exports.run = (bot, message, args) => {
-const whmsg = Webhook.MessageBuilder()
+const whmsg = new Webhook.MessageBuilder()
 .setName(`${message.author.tag} in ${message.guild.id}`)
 .setColor("#FFA500")
 .setText(args.join(" ").replace("@", "(a)"))
