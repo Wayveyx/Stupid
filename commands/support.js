@@ -7,10 +7,11 @@ const hook = new Webhook.Webhook(process.env.WEBHOOKURL);
 
 exports.run = (bot, message, args) => {
 const whmsg = new Webhook.MessageBuilder()
-.setName(`${message.author.tag} in ${message.guild.id}`)
+.setName(`${message.author.tag}`)
+.setAvatar(message.author.avatarURL) //I have no idea if this will work
 .setColor("#FFA500")
 .setText(args.join(" ").replace("@", "(a)"))
-.setImage(message.author.avatarURL)
+.addField("In Server:", message.guild.id)
 .setTime();
-bot.channels.get("581786947333390336").then(hook.send(whmsg)); //This might not work
+hook.send(whmsg)); //Im dumb lmao pls dont view previous version
 }
