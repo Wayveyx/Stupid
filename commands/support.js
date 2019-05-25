@@ -12,5 +12,5 @@ const whmsg = Webhook.MessageBuilder()
 .setText(args.join(" ").replace("@", "(a)"))
 .setImage(message.author.avatarURL)
 .setTime();
-bot.channels.get("581786947333390336").then(Hook.send(whmsg)); //This might not work
+bot.channels.get("581786947333390336").then(hook.send(whmsg)); //This might not work
 }
