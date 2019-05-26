@@ -1,7 +1,7 @@
 const discord = require('discord.js');
 const settings = require('./jsons/settings.json')
 
-exports.run = async (bot, message, args, tools) => {
+exports.run = async (bot, message, args) => {
 
 if(!settings.ids.includes(message.author.id)) { 
 let no = new discord.RichEmbed()
@@ -22,7 +22,7 @@ let amevaled = new discord.RichEmbed()
 .setTitle('Evaled')
 .setColor([255,0,0])
 .setDescription(clean(evaled));
-message.channel.send({embed: amevaled});
+message.channel.send(amevaled);
 } catch(err) { 
 message.channel.send(new discord.RichEmbed()
 .setTitle('Error')
@@ -33,7 +33,7 @@ message.channel.send(new discord.RichEmbed()
 function clean(text) {
 if (typeof(text) === 'string')
 return text.replace(/`/g, '`' + String.fromCharCode(8203)).replace(/@/g, '@' + String.fromCharCode(8203))
-           .replace(bot.token, 'MCA3NjM0NDc9MTIr3ktyNzY6.UDnaRg.uqLifnope7FFSf_xQqNdiB6T3A');
+           .replace("token", 'fuck off lmao');
 else
 return text;
 }
