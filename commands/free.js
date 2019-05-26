@@ -12,5 +12,5 @@ let sent = await bot.channels.filter(m => m.name == "free-games").forEach(m => m
 .setColor("#FFA500")
 .setTimestamp()));
 
-message.channel.send(`Link Sent to ${bot.channels.filter(m => m.name == "free-games").size} servers.`);
+message.channel.send(`Link Sent to ${bot.channels.filter(m => m.name == "free-games").size} channels.`);
 }
