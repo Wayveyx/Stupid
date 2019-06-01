@@ -37,8 +37,10 @@ let msg = message.content.toUpperCase();
 let user = message.author; //ive never used this rip
 let args = message.content.slice(pfix.length).trim().split(' ');
 let cmd = args.shift().toLowerCase();
-if (!msg.startsWith(pfix)) return;
 if(user.bot) return;
+if(message.channel.topic.includes("Stupid:Disable")) return; //If this works, screw a database with ignored channels and stuff ill just make the bot add this to the topic
+if (!msg.startsWith(pfix)) return;
+
 
 try{
 let commandFile = require(`./commands/${cmd}.js`);
