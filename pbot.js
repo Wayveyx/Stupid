@@ -42,8 +42,9 @@ if(message.channel.topic != null) {
 if(message.channel.topic.includes("Stupid:Disable")) return;
 }
 if (!msg.startsWith(pfix)) return;
-
-
+let regx = /^((?:https?:)?\/\/)?((?:www|m)\.)? ((?:discord\.gg|discordapp\.com))/g
+let check = regx.test(message.content.toLowerCase().replace(/\s+/g, ''))
+if(check.includes("discord")) return message.channel.send("yes");
 try{
 let commandFile = require(`./commands/${cmd}.js`);
 commandFile.run(bot, message, args);
