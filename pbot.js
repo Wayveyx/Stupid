@@ -31,7 +31,7 @@ bot.channels.get('570418229441331210').send(new Discord.RichEmbed()
 .setColor('RANDOM'));
 });
 
-bot.on('message', message => {
+bot.on('message', async message => {
 if(settings.gbl.includes(message.guild.id)) return;
 let msg = message.content.toUpperCase();
 let user = message.author; //ive never used this rip
