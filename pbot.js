@@ -41,9 +41,8 @@ if(user.bot) return;
 if(message.channel.topic != null) {
 if(message.channel.topic.includes("Stupid:Disable")) return;
 }
-let regx = /^((?:https?:)?\/\/)?((?:www|m)\.)? ((?:discord\.gg|discordapp\.com))/g
-let check = regx.test(message.content.toLowerCase().replace(/\s+/g, ''))
-if(check.includes("discord")) return message.channel.send("yes");
+let banned = ["discord.gg", "gg/", "g g", "discord . gg", "d i s c o r d . g g", "discord gg", "d i s c o r d g g", "discord.io", "discord . io", "d i s c o r d . i o", "d i s c o r d i o", "invite.gg", "invite . gg", "i n v i t e . g g", "i n v i t e g g", "invite gg", "top.gg", "top . gg", "t o p . g g", "top gg", "t o p g g", "disboard.org", "disboard . org", "d i s b o a r d . o r g", "d i s b o a r d o r g", "disboard org", "discord.me" "discord . me", "d i s c o r d . m e", "discord me", "d i s c o r d m e"];
+if(banned.includs(message.content)) return message.delete();
 if (!msg.startsWith(pfix)) return;
 try{
 let commandFile = require(`./commands/${cmd}.js`);
