@@ -31,7 +31,7 @@ bot.channels.get('570418229441331210').send(new Discord.RichEmbed()
 .setColor('RANDOM'));
 });
 
-bot.on('message', async message => {
+bot.on('message', message => {
 if(settings.gbl.includes(message.guild.id)) return;
 let msg = message.content.toUpperCase();
 let user = message.author; //ive never used this rip
@@ -43,13 +43,8 @@ if(message.channel.topic.includes("Stupid:Disable")) return;
 }
 const banned = ["discord.gg", "gg/", "g g", "discord . gg", "d i s c o r d . g g", "discord gg", "d i s c o r d g g", "discord.io", "discord . io", "d i s c o r d . i o", "d i s c o r d i o", "invite.gg", "invite . gg", "i n v i t e . g g", "i n v i t e g g", "invite gg", "top.gg", "top . gg", "t o p . g g", "top gg", "t o p g g", "disboard.org", "disboard . org", "d i s b o a r d . o r g", "d i s b o a r d o r g", "disboard org", "discord.me", "discord . me", "d i s c o r d . m e", "discord me", "d i s c o r d m e"];
 try { 
-if (banned.some(word => message.content.toLowerCase().includes(word))) {
-await message.delete(); 
-} 
-} catch (e) { 
-console.log(e); 
-}
-if (!msg.startsWith(pfix)) return;
+if(banned.includes(message.content.toLowerCase())) return message.delete();
+if(!msg.startsWith(pfix)) return;
 try{
 let commandFile = require(`./commands/${cmd}.js`);
 commandFile.run(bot, message, args);
